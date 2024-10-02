@@ -1,7 +1,7 @@
 {
 	"version": "8.2.1",
 	"slug": "ezville_wallpad",
-	"name": "EzVille RS485 Addon with Elevator Call",
+	"name": "EzVille RS485 Addon with Elevator Call_1",
 	"description": "이지빌용 수정된 애드온입니다.",
 	"url": "https://github.com/ktdo79/ha_addons",
 	"startup": "application",
