@@ -312,11 +312,6 @@ def ezville_loop(config):
     def on_disconnect(client, userdata, rc):
         log('INFO: MQTT 연결 해제')
         pass
-#    def on_disconnect(client, userdata, flags, reason_code, properties):
-#        log('[INFO] MQTT 연결 해제')
-#    if reason_code != 0:
-#        log(f'[ERROR] Disconnection reason: {reason_code}')        
-#        pass
 
 
     # MQTT message를 분류하여 처리
@@ -983,7 +978,7 @@ def ezville_loop(config):
     # MQTT 통신
     from paho.mqtt.enums import CallbackAPIVersion
     mqtt_client = mqtt.Client(CallbackAPIVersion.VERSION2, 'mqtt-ezville')
-#    mqtt.Client(client_id, callback_api_version=mqtt.CallbackAPIVersion.VERSION2)
+#    mqtt_client = mqtt.Client('mqtt-ezville')
     mqtt_client.username_pw_set(config['mqtt_id'], config['mqtt_password'])
     mqtt_client.on_connect = on_connect
     mqtt_client.on_disconnect = on_disconnect
