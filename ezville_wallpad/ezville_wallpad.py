@@ -401,8 +401,8 @@ serial_ack = {}
 last_query = int(0).to_bytes(2, "big")
 last_topic_list = {}
 
-    from paho.mqtt.enums import CallbackAPIVersion
-    mqtt_client = mqtt.Client(CallbackAPIVersion.VERSION2, 'mqtt-ezville', protocol=mqtt.MQTTv311
+from paho.mqtt.enums import CallbackAPIVersion
+mqtt_client = mqtt.Client(CallbackAPIVersion.VERSION2, 'mqtt-ezville')
 # mqtt = paho_mqtt.Client()
 mqtt_connected = False
 
