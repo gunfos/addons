@@ -309,8 +309,10 @@ def ezville_loop(config):
  
 
     # MQTT 통신 연결 해제 Callback
-    def on_disconnect(client, userdata, rc):
-        log('INFO: MQTT 연결 해제')
+    def on_disconnect(client, userdata, flags, reason_code, properties):
+        log('[INFO] MQTT 연결 해제')
+        if reason_code != 0:
+        log(f'[ERROR] Disconnection reason: {reason_code}')
         pass
 
 
