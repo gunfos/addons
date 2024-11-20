@@ -2,7 +2,7 @@
 
 import socket
 import serial
-import paho.mqtt.client as paho_mqtt
+import paho.mqtt.client as mqtt
 import json
 
 import sys
